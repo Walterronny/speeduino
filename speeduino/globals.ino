@@ -185,6 +185,7 @@ byte pinO2_2;     //second O2 pin
 byte pinBat;      //Battery voltage pin
 byte pinDisplayReset; // OLED reset pin
 byte pinTachOut;  //Tacho output
+byte pincelOut;      //Cel output
 byte pinFuelPump; //Fuel pump on/off
 byte pinIdle1;    //Single wire idle control
 byte pinIdle2;    //2 wire idle control (Not currently used)
@@ -302,6 +303,7 @@ inline bool pinIsOutput(byte pin)
   || ((pin == pinStepperStep) && isIdleSteper)
   || ((pin == pinStepperDir) && isIdleSteper)
   || (pin == pinTachOut)
+  || (pin == pincelOut)
   || ((pin == pinAirConComp) && (configPage15.airConEnable > 0))
   || ((pin == pinAirConFan) && (configPage15.airConEnable > 0) && (configPage15.airConFanEnabled > 0)) )
   {

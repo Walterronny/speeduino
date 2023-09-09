@@ -838,6 +838,7 @@ struct config2 {
   byte fanWhenCranking : 1; ///< Set whether the fan output will stay on when the engine is cranking (0=force off, 1=allow on)
   byte useDwellMap : 1;     ///< Setting to change between fixed dwell value and dwell map (0=Fixed value from @ref configPage4.dwellRun, 1=Use @ref dwellTable)
   byte fanEnable : 2;       ///< Fan mode. 0=Off, 1=On/Off, 2=PWM
+  byte celEnable : 2;       //< Cel Mode. 0=Off , 1=On
   byte rtc_mode : 2;        // Unused ?
   byte incorporateAFR : 1;  ///< Enable AFR target (stoich/afrtgt) compensation in PW calculation
   byte asePct[4];           ///< Afterstart enrichment values (%)
